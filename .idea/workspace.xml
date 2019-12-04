@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e39c304-cbf5-484d-8d46-7c094d715a40" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/loan-client">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/bank">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/LoanBroker">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="bank" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="bank" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="bank" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="loan-client" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="loan-client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="loan-client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="loan-client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="LoanBroker" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="LoanBroker" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sai-loanbroker" type="f1a62948:ProjectNode" />
+                <item name="LoanBroker" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Tmbnynz27H5l4EE1g0TV1whoJq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sai-week1/sai-loanbroker" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15820312" />
+    <property name="project.structure.side.proportion" value="0.4134727" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="broker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\SAI\sai-week1-practical-startup\sai-loanbroker\LoanBroker\src\main\resources" />
+      <recent name="C:\Users\User\Desktop\SAI\sai-week1-practical-startup\sai-loanbroker\LoanBroker\src\main\java\broker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BrokerMain">
+    <configuration name="BankMainArgs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bank.gui.BankMainArgs" />
+      <module name="sai-loanbroker.bank.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bank.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BrokerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="broker.BrokerMain" />
+      <module name="sai-loanbroker.LoanBroker.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="broker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="loanclient.gui.LoanClientMain" />
+      <module name="sai-loanbroker.loan-client.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loanclient.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="sai-loanbroker:bank [runABNAMRO]" type="GradleRunConfiguration" />
+      <toRun name="sai-loanbroker:loan-client [run]" type="GradleRunConfiguration" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sai-loanbroker [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="sai-loanbroker:bank [runABNAMRO]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/bank" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runABNAMRO" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="sai-loanbroker:bank [runING]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/bank" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runING" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="sai-loanbroker:loan-client [run]" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/loan-client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.BankMainArgs" />
+      <item itemvalue="Application.LoanClientMain" />
+      <item itemvalue="Application.BrokerMain" />
+      <item itemvalue="Gradle.sai-loanbroker:bank [runABNAMRO]" />
+      <item itemvalue="Gradle.sai-loanbroker:loan-client [run]" />
+      <item itemvalue="Gradle.sai-loanbroker [dependencies]" />
+      <item itemvalue="Gradle.sai-loanbroker:bank [runING]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.sai-loanbroker:bank [runING]" />
+        <item itemvalue="Application.BrokerMain" />
+        <item itemvalue="Application.LoanClientMain" />
+        <item itemvalue="Application.BankMainArgs" />
+        <item itemvalue="Gradle.sai-loanbroker [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e39c304-cbf5-484d-8d46-7c094d715a40" name="Default Changelist" comment="" />
+      <created>1574068388714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574068388714</updated>
+      <workItem from="1574068393398" duration="8245000" />
+      <workItem from="1574083636052" duration="104000" />
+      <workItem from="1574158433387" duration="8003000" />
+      <workItem from="1574670264144" duration="2258000" />
+      <workItem from="1574673648828" duration="851000" />
+      <workItem from="1574687998727" duration="13855000" />
+      <workItem from="1574773008909" duration="2589000" />
+      <workItem from="1574854998336" duration="8175000" />
+      <workItem from="1575015734908" duration="5150000" />
+      <workItem from="1575024036755" duration="6682000" />
+      <workItem from="1575359402638" duration="276000" />
+      <workItem from="1575359964780" duration="1423000" />
+      <workItem from="1575361394076" duration="137000" />
+      <workItem from="1575361564190" duration="3671000" />
+      <workItem from="1575365791898" duration="45000" />
+      <workItem from="1575365966090" duration="15697000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="394" y="89" key="#Inspections" timestamp="1575361897355">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="394" y="89" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1575361897355" />
+    <state x="394" y="89" key="#Project_Structure" timestamp="1575365828271">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="394" y="89" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1575365828271" />
+    <state x="531" y="185" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575372318343">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="531" y="185" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1575372318343" />
+    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575365435751">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1575365435751" />
+    <state x="582" y="136" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1575364684537">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="582" y="136" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.860@0.0.1600.860" timestamp="1575364684536" />
+    <state x="606" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1575375176367">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="606" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1575375176367" />
+    <state x="359" y="355" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1575377475519">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="359" y="355" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.860@0.0.1600.860" timestamp="1575377475519" />
+    <state x="570" y="310" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1575377477715">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="570" y="310" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1600.860@0.0.1600.860" timestamp="1575377477715" />
+    <state x="554" y="191" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1575365062897">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="554" y="191" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1600.860@0.0.1600.860" timestamp="1575365062897" />
+    <state width="581" height="466" key="DebuggerActiveHint" timestamp="1575371595916">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="581" height="466" key="DebuggerActiveHint/0.0.1600.860@0.0.1600.860" timestamp="1575371595916" />
+    <state x="580" y="211" key="FileChooserDialogImpl" timestamp="1575366595539">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="211" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575366595539" />
+    <state width="1558" height="160" key="GridCell.Tab.0.bottom" timestamp="1575384919235">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="160" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
+    <state width="1558" height="160" key="GridCell.Tab.0.center" timestamp="1575384919235">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="160" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
+    <state width="1558" height="160" key="GridCell.Tab.0.left" timestamp="1575384919235">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="160" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
+    <state width="1558" height="160" key="GridCell.Tab.0.right" timestamp="1575384919235">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="160" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
+    <state width="1558" height="273" key="GridCell.Tab.1.bottom" timestamp="1575373831801">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="273" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575373831801" />
+    <state width="1558" height="273" key="GridCell.Tab.1.center" timestamp="1575373831800">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="273" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
+    <state width="1558" height="273" key="GridCell.Tab.1.left" timestamp="1575373831800">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="273" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
+    <state width="1558" height="273" key="GridCell.Tab.1.right" timestamp="1575373831800">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1558" height="273" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
+    <state x="303" y="10" key="SettingsEditor" timestamp="1575373262662">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="303" y="10" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575373262662" />
+    <state x="501" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1575448771130">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="501" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1575448771130" />
+    <state x="427" y="0" width="744" height="860" key="find.popup" timestamp="1575381603276">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="427" y="0" width="744" height="860" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1575381603276" />
+    <state x="507" y="49" key="refactoring.ChangeSignatureDialog" timestamp="1575382373674">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="49" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1575382373674" />
+    <state x="460" y="198" key="run.anything.popup" timestamp="1575373259246">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="460" y="198" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1575373259246" />
+  </component>
+</project>

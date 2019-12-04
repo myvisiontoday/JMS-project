@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+version 'unspecified'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+    flatDir { //include all *.jar files from local "lib" directory (e.g. bookingserviceModel.jar)
+        dirs 'lib'
+    }
+}
+application {
+    mainClassName = 'broker.LoanBroker'
+}
+task runBroker(type: JavaExec) {
+    main = mainClassName
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile files(fileTree(dir: 'lib', includes: ['*.jar']))
+}
