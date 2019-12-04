@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e39c304-cbf5-484d-8d46-7c094d715a40" name="Default Changelist" comment="" />
+    <list default="true" id="9e39c304-cbf5-484d-8d46-7c094d715a40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankApplicationGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/BrokerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/ListViewLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/classes/java/main/broker/ListViewLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/build/libs/LoanBroker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/build/libs/LoanBroker.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/src/main/java/broker/BrokerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/src/main/java/broker/BrokerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/src/main/java/model/ApplicationClientGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/src/main/java/model/ApplicationClientGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanBroker/src/main/java/model/ApplicatonBankGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoanBroker/src/main/java/model/ApplicatonBankGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/build/classes/java/main/bank/gui/BankController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/gui/LoanClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/model/ClientApplicationGateway$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/model/ClientApplicationGateway$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/model/ClientApplicationGateway.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/build/classes/java/main/loanclient/model/ClientApplicationGateway.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/ClientApplicationGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/ClientApplicationGateway.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +146,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Tmbnynz27H5l4EE1g0TV1whoJq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -118,6 +157,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sai-week1/sai-loanbroker" />
@@ -322,6 +362,8 @@
       <workItem from="1575361564190" duration="3671000" />
       <workItem from="1575365791898" duration="45000" />
       <workItem from="1575365966090" duration="15697000" />
+      <workItem from="1575457224835" duration="5725000" />
+      <workItem from="1575477604630" duration="2733000" />
     </task>
     <servers />
   </component>
@@ -341,10 +383,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="531" y="185" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1600.860@0.0.1600.860" timestamp="1575372318343" />
-    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575365435751">
+    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575463170872">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1575365435751" />
+    <state x="256" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1575463170872" />
     <state x="582" y="136" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1575364684537">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -373,46 +415,50 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="211" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1575366595539" />
-    <state width="1558" height="160" key="GridCell.Tab.0.bottom" timestamp="1575384919235">
+    <state width="1558" height="188" key="GridCell.Tab.0.bottom" timestamp="1575487581751">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="160" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
-    <state width="1558" height="160" key="GridCell.Tab.0.center" timestamp="1575384919235">
+    <state width="1558" height="188" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575487581751" />
+    <state width="1558" height="188" key="GridCell.Tab.0.center" timestamp="1575487581749">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="160" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
-    <state width="1558" height="160" key="GridCell.Tab.0.left" timestamp="1575384919235">
+    <state width="1558" height="188" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1575487581749" />
+    <state width="1558" height="188" key="GridCell.Tab.0.left" timestamp="1575487581748">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="160" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
-    <state width="1558" height="160" key="GridCell.Tab.0.right" timestamp="1575384919235">
+    <state width="1558" height="188" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1575487581748" />
+    <state width="1558" height="188" key="GridCell.Tab.0.right" timestamp="1575487581749">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="160" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575384919235" />
-    <state width="1558" height="273" key="GridCell.Tab.1.bottom" timestamp="1575373831801">
+    <state width="1558" height="188" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1575487581749" />
+    <state width="779" height="273" key="GridCell.Tab.1.bottom" timestamp="1575460390172">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="273" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575373831801" />
-    <state width="1558" height="273" key="GridCell.Tab.1.center" timestamp="1575373831800">
+    <state width="779" height="273" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1575460390172" />
+    <state width="779" height="273" key="GridCell.Tab.1.center" timestamp="1575460390172">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="273" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
-    <state width="1558" height="273" key="GridCell.Tab.1.left" timestamp="1575373831800">
+    <state width="779" height="273" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1575460390172" />
+    <state width="779" height="273" key="GridCell.Tab.1.left" timestamp="1575460390172">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="273" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
-    <state width="1558" height="273" key="GridCell.Tab.1.right" timestamp="1575373831800">
+    <state width="779" height="273" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1575460390172" />
+    <state width="779" height="273" key="GridCell.Tab.1.right" timestamp="1575460390172">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1558" height="273" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1575373831800" />
+    <state width="779" height="273" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1575460390172" />
     <state x="303" y="10" key="SettingsEditor" timestamp="1575373262662">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="303" y="10" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1575373262662" />
-    <state x="501" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1575448771130">
+    <state x="501" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1575478397166">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="501" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1575448771130" />
+    <state x="501" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1575478397166" />
+    <state x="608" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575487601779">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="608" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1575487601779" />
     <state x="427" y="0" width="744" height="860" key="find.popup" timestamp="1575381603276">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

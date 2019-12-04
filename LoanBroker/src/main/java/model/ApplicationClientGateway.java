@@ -17,8 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class ApplicationClientGateway {
-    public static Map<String, LoanRequest> loanRequests = new HashMap<>();
-
 
     private static final String LOAN_REQUEST_QUEUE = "loanRequestQueue" ;
     private static final String LOAN_REPLY_QUEUE = "loanReplyQueue" ;
@@ -41,7 +39,7 @@ public abstract class ApplicationClientGateway {
                         Gson gson = new Gson();
                         LoanRequest loanRequest = gson.fromJson(((TextMessage) message).getText(), LoanRequest.class);
                         if (loanRequest != null){
-                            String replyId = message.getJMSCorrelationID();
+                            String replyId = message.getJMSMessageID();
                             LoanRequestArrived(replyId, loanRequest);
                         }
                     } catch (JMSException e) {
@@ -56,8 +54,7 @@ public abstract class ApplicationClientGateway {
     protected abstract void LoanRequestArrived(String replyID, LoanRequest loanRequest);
 
     public void replyLoanRequest(String replyId, LoanReply loanReply) {
-        try {
-
+        try{
         Gson gson = new Gson();
         String requestMessage = gson.toJson(loanReply);
 
@@ -65,7 +62,9 @@ public abstract class ApplicationClientGateway {
         Message msg = messagingSendGateway.createMessage(requestMessage);
         msg.setJMSCorrelationID(replyId);
         messagingSendGateway.SendMessage(msg);
-        logger.info("Request is forwarded to the bank: " + loanReply);
+        logger.info("Request is sent to the Client: " + loanReply);
+            logger.info("Request is sent to the Client: " + replyId);
+
 
         } catch (JMSException e) {
             e.printStackTrace();

@@ -17,8 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public abstract class ApplicatonBankGateway {
-    public static Map<String, BankInterestRequest> loanRequests = new HashMap<>();
-
 
     private static final String INTEREST_REQUEST_QUEUE = "interestRequestQueue" ;
     private static final String INTEREST_REPLY_QUEUE = "interestReplyQueue" ;
@@ -65,10 +63,7 @@ public abstract class ApplicatonBankGateway {
             Message msg = messagingSendGateway.createMessage(requestMessage);
             msg.setJMSCorrelationID(replyId);
             messagingSendGateway.SendMessage(msg);
-            logger.info("Request is forwarded to the bank: " + bankInterestRequest);
-
-            //add to the hash map????? to do
-            loanRequests.put(replyId,bankInterestRequest);
+            logger.info("Request is forwarded to the bank: " + bankInterestRequest + replyId);
 
         } catch (JMSException e) {
             e.printStackTrace();

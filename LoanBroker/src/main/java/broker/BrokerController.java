@@ -73,90 +73,21 @@ public class BrokerController implements Initializable {
                  LoanReply loanReply = new LoanReply();
                  loanReply.setBankID(bankInterestReply.getBankId());
                  loanReply.setInterest(bankInterestReply.getInterest());
+
+                 applicationClientGateway.replyLoanRequest(replyID, loanReply);
+                 LoanRequest loanRequest = loanRequests.get(replyID);
+                 if(loanRequest!=null) {
+                     Platform.runLater(new Runnable() {
+                         @Override
+                         public void run() {
+                             ListViewLine listViewLine = getRequestReply(loanRequest);
+                             listViewLine.setBankReply(bankInterestReply);
+                             lvBankRequestReply.refresh();
+                         }
+                     });
+                 }
             }
         };
-
-        receiveMessagingGatewayClientToBroker.SetListener(new MessageListener() {
-            @Override
-            public void onMessage(Message message) {
-                Gson gson = new Gson();
-                BankInterestRequest bankInterestRequest = null;
-                try {
-                    // @TODO: send the BankInterestRequest to the bank...
-                    LoanRequest loanRequest = gson.fromJson(((TextMessage) message).getText(), LoanRequest.class);
-
-                    bankInterestRequest = new BankInterestRequest();
-                    bankInterestRequest.setAmount(loanRequest.getAmount());
-                    bankInterestRequest.setTime(loanRequest.getTime());
-                    String requestMessage = gson.toJson(bankInterestRequest);
-
-                    // send message
-                    Message msg = sendMessagingGatewayBrokerToBank.createMessage(requestMessage);
-                    msg.setJMSReplyTo(receiveMessagingGatewayBankToBroker.getReceiveDestination());
-                    msg.setJMSCorrelationID(message.getJMSMessageID());
-                    sendMessagingGatewayBrokerToBank.SendMessage(msg);
-
-                    //add to the hash map
-                    messages.put(message.getJMSMessageID(),message);
-                    messages.put(msg.getJMSMessageID(),msg);
-                } catch (JMSException e) {
-                    e.printStackTrace();
-                }
-
-                //create the ListViewLine line with the request and add it to lvLoanRequestReply
-                ListViewLine listViewLine = new ListViewLine(bankInterestRequest);
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        lvBankRequestReply.getItems().add(listViewLine);
-                    }
-                });
-                logger.info("Sent the loan request: " + bankInterestRequest);
-            }
-        });
-        receiveMessagingGatewayBankToBroker.SetListener(new MessageListener() {
-            @Override
-            public void onMessage(Message message) {
-                BankInterestReply reply = null;
-                Gson gson = new Gson();
-                try {
-                    reply = gson.fromJson(((TextMessage)message).getText(),BankInterestReply.class);
-
-                    // @TODO: send the BankInterestRequest to the bank...
-                    LoanReply loanReply = new LoanReply();
-                    loanReply.setBankID(reply.getBankId());
-                    loanReply.setInterest(reply.getInterest());
-                    String requestMessage = gson.toJson(loanReply);
-
-                    // prepare to send message
-                    Message oldMessage = messages.get(message.getJMSCorrelationID());
-                    //String destinationQueue =((ActiveMQDestination)oldMessage.getJMSReplyTo()).getPhysicalName();
-
-                    //create message
-                    Message msg = sendMessagingGatewayBrokerToClient.createMessage(requestMessage);
-                    msg.setJMSCorrelationID(oldMessage.getJMSCorrelationID());
-                    sendMessagingGatewayBrokerToClient.SendMessage(msg);
-
-                    messages.put(msg.getJMSMessageID(),msg);
-                    logger.info("Sent the loan reply: " + loanReply);
-
-                    //create the ListViewLine line with the request and add it to lvLoanRequestReply
-                    BankInterestRequest request = gson.fromJson(((TextMessage)oldMessage).getText(),BankInterestRequest.class);
-                    ListViewLine listViewLine = getRequestReply(request);
-                    listViewLine.setBankReply(reply);
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            lvBankRequestReply.refresh();
-                        }
-                    });
-
-                } catch (JMSException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
 
     }
 
@@ -166,11 +97,11 @@ public class BrokerController implements Initializable {
      * @param request BankInterestRequest for which the line of lvMessages should be found and returned
      * @return The ListViewLine line of lvMessages which contains the given request
      */
-    private ListViewLine getRequestReply(BankInterestRequest request) {
+    private ListViewLine getRequestReply(LoanRequest request) {
 
         for (int i = 0; i < lvBankRequestReply.getItems().size(); i++) {
             ListViewLine rr =  lvBankRequestReply.getItems().get(i);
-            if (rr.getBankRequest() != null && rr.getBankRequest().toString().equals(request.toString())) {
+            if (rr.getBankRequest() != null && rr.getBankRequest().equals(request)) {
                 return rr;
             }
         }

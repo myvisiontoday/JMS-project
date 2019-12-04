@@ -1,6 +1,10 @@
-package loanclient.model;
+package loanclient.gui;
 
 import com.google.gson.Gson;
+import loanclient.model.LoanReply;
+import loanclient.model.LoanRequest;
+import loanclient.model.MessagingReceiveGateway;
+import loanclient.model.MessagingSendGateway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +38,7 @@ public abstract class ClientApplicationGateway {
                     LoanRequest loanRequest = null;
                     try {
                         loanReply = gson.fromJson(((TextMessage) message).getText(), LoanReply.class);
+                        logger.info("Request is sent to the Client: " + message.getJMSMessageID());
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
@@ -46,6 +51,9 @@ public abstract class ClientApplicationGateway {
                     }
                     if (loanRequest != null){
                     ReplyArrived(loanRequest,loanReply);
+                    }
+                    else {
+                        logger.info("reply id did not match");
                     }
                 }
             });
@@ -68,8 +76,9 @@ public abstract class ClientApplicationGateway {
             message.setJMSReplyTo(messagingReceiveGateway.getReceiveDestination());
             messagingSendGateway.SendMessage(message);
             logger.info("Sent the loan request: " + loanRequest);
-
+            logger.info("Request is sent to the Client: " + message.getJMSMessageID());
             messages.put(message.getJMSMessageID(),loanRequest);
+
         } catch (JMSException e) {
             e.printStackTrace();
         }
