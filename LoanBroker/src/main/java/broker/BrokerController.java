@@ -8,19 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import loanclient.model.LoanReply;
-import loanclient.model.LoanRequest;
-import loanclient.model.MessagingReceiveGateway;
-import loanclient.model.MessagingSendGateway;
-import model.ApplicationClientGateway;
+import loanclient.model.LoanRequest;import model.ApplicationClientGateway;
 import model.ApplicatonBankGateway;
-import org.apache.activemq.command.ActiveMQDestination;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -30,17 +22,14 @@ public class BrokerController implements Initializable {
     public static Map<String, LoanRequest> loanRequests = new HashMap<>();
     public static Map<String, BankInterestRequest> bankRequests = new HashMap<>();
 
+    //two gateways for Broker application
     private ApplicationClientGateway applicationClientGateway;
     private ApplicatonBankGateway applicatonBankGateway;
-
-    final Logger logger = LoggerFactory.getLogger(getClass());
-
-    //four Application Gateways
 
     @FXML
     private ListView<ListViewLine> lvBankRequestReply;
 
-    public BrokerController() throws JMSException {
+    public BrokerController() {
         applicationClientGateway = new ApplicationClientGateway() {
             //Loan request listener from Client
             @Override
@@ -51,7 +40,7 @@ public class BrokerController implements Initializable {
                 //send request to the Bank
                 applicatonBankGateway.sendInterestRequest(replyID,bankInterestRequest);
 
-                //add to the hash map????? to do
+                //add to the hash map?????
                 loanRequests.put(replyID, loanRequest);
 
                 //add to the BankRequest
