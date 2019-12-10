@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import loanclient.model.LoanReply;
 import loanclient.model.LoanRequest;
 import model.*;
+import model.ApplicationClientGateway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class BrokerController implements Initializable {
     public static Map<String, LoanRequest> loanRequests = new HashMap<>();
     public static Map<String, BankInterestRequest> bankRequests = new HashMap<>();
 
+    //two gateways for Broker application
     private ApplicationClientGateway applicationClientGateway;
     private ApplicationBankGateway applicationBankGateway;
 
@@ -29,7 +31,6 @@ public class BrokerController implements Initializable {
     private CreditCheckApplicationGateway creditCheckApplicationGateway;
 
     final Logger logger = LoggerFactory.getLogger(getClass());
-
     @FXML
     private ListView<ListViewLine> lvBankRequestReply;
 
@@ -57,7 +58,7 @@ public class BrokerController implements Initializable {
                 //send request to the Bank
                 applicationBankGateway.sendInterestRequest(replyID,bankInterestRequest);
 
-                //add to the hash map????? to do
+                //add to the hash map?????
                 loanRequests.put(replyID, loanRequest);
 
                 //add to the BankRequest
