@@ -21,6 +21,7 @@ task runBroker(type: JavaExec) {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '2.28'
+    compile group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.28'
     compile files(fileTree(dir: 'lib', includes: ['*.jar']))
 }

@@ -1,5 +1,7 @@
 package bank.model;
 
+import java.util.Objects;
+
 /**
  *
  * This class stores all information about an request from a bank to offer
@@ -64,5 +66,21 @@ public class BankInterestRequest {
     @Override
     public String toString() {
         return /*" ssn=" + this.SSN + */" amount=" + amount + " time=" + time + " credit=" + credit + " history" + history;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankInterestRequest that = (BankInterestRequest) o;
+        return credit == that.credit &&
+                history == that.history &&
+                amount == that.amount &&
+                time == that.time;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(credit, history, amount, time);
     }
 }

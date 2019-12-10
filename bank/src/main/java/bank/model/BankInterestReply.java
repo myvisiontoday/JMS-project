@@ -1,5 +1,7 @@
 package bank.model;
 
+import java.util.Objects;
+
 /**
  * This class stores information about the bank reply
  *  to a loan request of the specific client
@@ -42,5 +44,19 @@ public class BankInterestReply {
 
     public String toString() {
         return "quote=" + this.bankId + " interest=" + this.interest;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankInterestReply that = (BankInterestReply) o;
+        return Double.compare(that.interest, interest) == 0 &&
+                Objects.equals(bankId, that.bankId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(interest, bankId);
     }
 }

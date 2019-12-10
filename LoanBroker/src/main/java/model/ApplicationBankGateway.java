@@ -3,9 +3,11 @@ package model;
 import bank.model.BankInterestReply;
 import bank.model.BankInterestRequest;
 import com.google.gson.Gson;
-import loanclient.model.LoanRequest;
 import loanclient.model.MessagingReceiveGateway;
 import loanclient.model.MessagingSendGateway;
+import model.banks.ABNBank;
+import model.banks.INGBank;
+import model.banks.RaboBank;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,13 +15,16 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class ApplicatonBankGateway {
+public abstract class ApplicationBankGateway {
 
-    private static final String INTEREST_REQUEST_QUEUE = "interestRequestQueue" ;
+    private static final String INTEREST_REQUEST_QUEUE = "ingRequestQueue" ;
     private static final String INTEREST_REPLY_QUEUE = "interestReplyQueue" ;
+    private static int counter = 0;
+
+    private List<BankSender> bankSenderList = new ArrayList<>();
 
 
     private MessagingReceiveGateway messagingReceiveGateway;
@@ -27,7 +32,15 @@ public abstract class ApplicatonBankGateway {
 
     final Logger logger = LoggerFactory.getLogger(getClass());
 
-    public ApplicatonBankGateway() {
+    public ApplicationBankGateway() {
+        try {
+            bankSenderList.add(new INGBank("ingRequestQueue"));
+            bankSenderList.add(new ABNBank("abnRequestQueue"));
+            bankSenderList.add(new RaboBank("raboRequestQueue"));
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+
         try {
             messagingSendGateway = new MessagingSendGateway(INTEREST_REQUEST_QUEUE);
             messagingReceiveGateway = new MessagingReceiveGateway(INTEREST_REPLY_QUEUE);
@@ -62,7 +75,15 @@ public abstract class ApplicatonBankGateway {
             // send message
             Message msg = messagingSendGateway.createMessage(requestMessage);
             msg.setJMSCorrelationID(replyId);
-            messagingSendGateway.SendMessage(msg);
+            msg.setIntProperty("aggregationID",counter);
+            counter++;
+            for(BankSender bank: bankSenderList)
+            {
+                if (bank.evaluateRequest(bankInterestRequest))
+                {
+                    bank.getSender().SendMessage(msg);
+                }
+            }
             logger.info("Request is forwarded to the bank: " + bankInterestRequest + replyId);
 
         } catch (JMSException e) {

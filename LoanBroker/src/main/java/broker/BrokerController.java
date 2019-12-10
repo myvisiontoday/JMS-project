@@ -9,18 +9,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import loanclient.model.LoanReply;
 import loanclient.model.LoanRequest;
-import loanclient.model.MessagingReceiveGateway;
-import loanclient.model.MessagingSendGateway;
-import model.ApplicationClientGateway;
-import model.ApplicatonBankGateway;
-import org.apache.activemq.command.ActiveMQDestination;
+import model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,25 +23,39 @@ public class BrokerController implements Initializable {
     public static Map<String, BankInterestRequest> bankRequests = new HashMap<>();
 
     private ApplicationClientGateway applicationClientGateway;
-    private ApplicatonBankGateway applicatonBankGateway;
+    private ApplicationBankGateway applicationBankGateway;
+
+    private ArchiveApplicationGateway archiveApplicationGateway;
+    private CreditCheckApplicationGateway creditCheckApplicationGateway;
 
     final Logger logger = LoggerFactory.getLogger(getClass());
-
-    //four Application Gateways
 
     @FXML
     private ListView<ListViewLine> lvBankRequestReply;
 
-    public BrokerController() throws JMSException {
+    public BrokerController() {
+        archiveApplicationGateway = new ArchiveApplicationGateway();
+        creditCheckApplicationGateway = new CreditCheckApplicationGateway();
+
         applicationClientGateway = new ApplicationClientGateway() {
             //Loan request listener from Client
             @Override
             protected void LoanRequestArrived(String replyID, LoanRequest loanRequest) {
+                // call web service for credit history
+                CreditHistory creditHistory = creditCheckApplicationGateway.creditCheck(loanRequest.getSsn());
+
                 BankInterestRequest bankInterestRequest = new BankInterestRequest();
                 bankInterestRequest.setAmount(loanRequest.getAmount());
                 bankInterestRequest.setTime(loanRequest.getTime());
+                if(creditHistory!=null) {
+                    bankInterestRequest.setCredit(creditHistory.getCreditScore());
+                    bankInterestRequest.setHistory(creditHistory.getHistory());
+                }
+                else
+                    logger.info("Something went wrong with Credit check WebService");
+
                 //send request to the Bank
-                applicatonBankGateway.sendInterestRequest(replyID,bankInterestRequest);
+                applicationBankGateway.sendInterestRequest(replyID,bankInterestRequest);
 
                 //add to the hash map????? to do
                 loanRequests.put(replyID, loanRequest);
@@ -66,16 +72,20 @@ public class BrokerController implements Initializable {
                 });
             }
         };
-        applicatonBankGateway = new ApplicatonBankGateway() {
+        applicationBankGateway = new ApplicationBankGateway() {
             @Override
             protected void bankReplyArrived(String replyID, BankInterestReply bankInterestReply) {
+                LoanRequest loanRequest = loanRequests.get(replyID);
+                if(bankInterestReply.getInterest()>0.0)
+                {
+                    archiveApplicationGateway.archiveLoan(bankInterestReply,loanRequest);
+                }
                 Gson gson = new Gson();
-                 LoanReply loanReply = new LoanReply();
-                 loanReply.setBankID(bankInterestReply.getBankId());
-                 loanReply.setInterest(bankInterestReply.getInterest());
+                LoanReply loanReply = new LoanReply();
+                loanReply.setBankID(bankInterestReply.getBankId());
+                loanReply.setInterest(bankInterestReply.getInterest());
 
                  applicationClientGateway.replyLoanRequest(replyID, loanReply);
-                 LoanRequest loanRequest = loanRequests.get(replyID);
                  if(loanRequest!=null) {
                      Platform.runLater(new Runnable() {
                          @Override
@@ -88,9 +98,7 @@ public class BrokerController implements Initializable {
                  }
             }
         };
-
     }
-
 
     /**
      * This method returns the line of lvMessages which contains the given loan request.

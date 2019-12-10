@@ -13,11 +13,12 @@ import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.ResourceBundle;
 
 class BankController implements Initializable {
-    private static Map<BankInterestRequest, String> messages = new HashMap<>();
+    private static Map<String, BankInterestRequest> messages = new HashMap<>();
     final Logger logger = LoggerFactory.getLogger(getClass());
 
     private final String bankId;
@@ -34,7 +35,7 @@ class BankController implements Initializable {
     public BankController(String queueName, String bankId) {
         this.bankId = bankId;
         LoggerFactory.getLogger(getClass()).info("Created BankController with arguments [queueName="+queueName+"] and [bankId="+bankId+"]");
-        bankApplicationGateway = new BankApplicationGateway() {
+        bankApplicationGateway = new BankApplicationGateway(queueName) {
             @Override
             public void brokerRequestArrived(String replyId, BankInterestRequest bankInterestRequest) {
                 //create the ListViewLine line with the request and add it to lvBankRequestReply
@@ -47,7 +48,7 @@ class BankController implements Initializable {
                 });
 
                 //put it to hash map
-                messages.put(bankInterestRequest,replyId);
+                messages.put(replyId, bankInterestRequest);
             }
         };
     }
@@ -63,9 +64,23 @@ class BankController implements Initializable {
         String textMessage = gson.toJson(bankInterestReply);
 
         ListViewLine listViewLine = lvBankRequestReply.getSelectionModel().getSelectedItem();
-        String replyId = messages.get(listViewLine.getBankInterestRequest());
+        String replyId = null;
+        Iterator it = messages.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            if(pair.getValue().equals(listViewLine.getBankInterestRequest()))
+                {
+                    replyId = (String) pair.getKey();
+                }
+            it.remove(); // avoids a ConcurrentModificationException
+        }
+        if(replyId!=null)
+        {
+            this.bankApplicationGateway.sendReplyToBroker(replyId, bankInterestReply);
+        }
+        else
+            logger.info("replyID not found");
 
-        this.bankApplicationGateway.sendReplyToBroker(replyId, bankInterestReply);
 
         listViewLine.setBankInterestReply(bankInterestReply);
         Platform.runLater(new Runnable() {

@@ -1,11 +1,11 @@
 package model;
 
-import bank.model.BankInterestRequest;
 import com.google.gson.Gson;
 import loanclient.model.LoanReply;
 import loanclient.model.LoanRequest;
 import loanclient.model.MessagingReceiveGateway;
 import loanclient.model.MessagingSendGateway;
+import org.glassfish.jersey.client.ClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +13,7 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public abstract class ApplicationClientGateway {
 
