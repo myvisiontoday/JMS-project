@@ -27,6 +27,7 @@ public class BrokerController implements Initializable {
     private ApplicationClientGateway applicationClientGateway;
     private ApplicationBankGateway applicationBankGateway;
 
+    //
     private ArchiveApplicationGateway archiveApplicationGateway;
     private CreditCheckApplicationGateway creditCheckApplicationGateway;
 

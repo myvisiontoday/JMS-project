@@ -16,7 +16,9 @@ import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class ApplicationBankGateway {
 
@@ -24,6 +26,7 @@ public abstract class ApplicationBankGateway {
     private static final String INTEREST_REPLY_QUEUE = "interestReplyQueue" ;
     private static int counter = 0;
 
+    private Map<Integer, BankReplyAggregator> bankReplyAggregators = new HashMap<>();
     private List<BankSender> bankSenderList = new ArrayList<>();
 
 
@@ -51,10 +54,16 @@ public abstract class ApplicationBankGateway {
                     try {
                         Gson gson = new Gson();
                         BankInterestReply bankInterestReply = gson.fromJson(((TextMessage) message).getText(), BankInterestReply.class);
-                        if (bankInterestReply != null){
-                            String replyId = message.getJMSCorrelationID();
-                            bankReplyArrived(replyId, bankInterestReply);
-
+                        int aggregationID = message.getIntProperty("aggregationID");
+                        BankReplyAggregator bankReplyAggregator = bankReplyAggregators.get(aggregationID);
+                        if(bankInterestReply!=null)
+                        {
+                            bankReplyAggregator.addReply(bankInterestReply);
+                            if(bankReplyAggregator.finish()) {
+                                BankInterestReply bestBankInterestReply = bankReplyAggregator.findBestReply();
+                                String replyId = message.getJMSCorrelationID();
+                                bankReplyArrived(replyId, bestBankInterestReply);
+                            }
                         }
                     } catch (JMSException e) {
                         e.printStackTrace();
@@ -76,14 +85,18 @@ public abstract class ApplicationBankGateway {
             Message msg = messagingSendGateway.createMessage(requestMessage);
             msg.setJMSCorrelationID(replyId);
             msg.setIntProperty("aggregationID",counter);
-            counter++;
+            int nrOfBankRequest = 0;
             for(BankSender bank: bankSenderList)
             {
                 if (bank.evaluateRequest(bankInterestRequest))
                 {
                     bank.getSender().SendMessage(msg);
+                    nrOfBankRequest++;
                 }
             }
+            BankReplyAggregator bankReplyAggregator = new BankReplyAggregator(nrOfBankRequest);
+            bankReplyAggregators.put(counter, bankReplyAggregator);
+            counter++;
             logger.info("Request is forwarded to the bank: " + bankInterestRequest + replyId);
 
         } catch (JMSException e) {
